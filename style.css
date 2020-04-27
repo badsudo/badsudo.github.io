@@ -1,73 +1,112 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-body {
-	margin: 0;
-	background: #222;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
-}
-
-.container {
-	width: 80%;
-	margin: 0 auto;
-}
-
-header {
-  background: #55d6aa;
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.logo {
-  float: left;
-  padding: 10px 0;
-}
-
-nav {
-  float: right;
-}
-
-nav ul {
-  margin: 0;
+*{
   padding: 0;
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-
-  position: relative;
-}
-
-nav a {
-  color: #444;
+  margin: 0;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
+  list-style: none;
+  box-sizing: border-box;
 }
-
-nav a:hover {
-  color: #000;
+body{
+  font-family: 'Poppins', sans-serif;
 }
-
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #444;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
+nav{
+  background: #0082e6;
+  height: 80px;
   width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 27px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight:bolder;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Inconsolata', monospace;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+#alt{
+	text-transform: uppercase;
+	font-size: 75px;
+	font-weight: bold;
+	position: absolute;
+	left: 26%;
+	top: 33%;
+	font-family: 'Inconsolata', monospace;
+}
+#smash{
+	font-size: 20px;
+	position: absolute;
+	font-weight: lighter;
+	top: 45%;
+	left: 39%;
 }
