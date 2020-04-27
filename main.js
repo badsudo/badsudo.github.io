@@ -1,3 +1,3 @@
 const clickbait = () =>{
-	console.log('works');
+	document.getElementById('btn').innerHTML = "just kidding";
 }
