@@ -1,3 +1,3 @@
-const clickbait = () =>{
-	document.getElementById('btn').innerHTML()= "just kidding";
+const clickme = () => {
+	windows.location.reload(true);
 }
