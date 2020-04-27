@@ -1,3 +1,3 @@
 const clickme = () => {
-	windows.location.reload(true);
+	window.location.reload(true);
 }
